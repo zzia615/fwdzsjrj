@@ -49,6 +49,18 @@ namespace fwdzsjrj
 
             new Form2("瓷砖注意事项").ShowDialog();
         }
-        
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void Form3_SizeChanged(object sender, EventArgs e)
+        {
+            int X = (this.Width - panel1.Width) / 2;
+            int Y = (this.Height - panel1.Height) / 2;
+
+            panel1.Location = new Point(X, Y);
+        }
     }
 }

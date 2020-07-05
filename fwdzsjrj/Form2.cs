@@ -25,11 +25,11 @@ namespace fwdzsjrj
             PDFPageView pageView = new PDFPageView();
 
             pageView.Dock = DockStyle.Fill;
-
             pageView.Document = new PDFDocument();
             pageView.Document.Load(stream);
-
             this.Controls.Add(pageView);
+
+            pageView.ZoomMode = PDFZoomMode.FitWidth;
         }
 
         private void Form2_FormClosed(object sender, FormClosedEventArgs e)
